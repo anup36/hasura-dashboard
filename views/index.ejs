@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hasura Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<div class="container">
+  <h2>AirBnB Customers Record.</h2>
+  <p>AirBnB Sample Data Set of all the Active Customer currently using AIRBNB App.</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Address</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <% customers.forEach(function(customer){ %>
+            <tr>
+                <td> <%= customer.name %> </td>
+                <td> <%= customer.username %> </td>
+                <td> <%= customer.email %> </td>
+                <td> <%= customer.address %></td>
+              </tr>  
+          <% }); %>
+    
+      <!-- <tr class="success">
+        <td>Success</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="danger">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="info">
+        <td>Info</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+      <tr class="warning">
+        <td>Warning</td>
+        <td>Refs</td>
+        <td>bo@example.com</td>
+      </tr>
+      <tr class="active">
+        <td>Active</td>
+        <td>Activeson</td>
+        <td>act@example.com</td>
+      </tr> -->
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
