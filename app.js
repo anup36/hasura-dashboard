@@ -35,7 +35,7 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect('mongodb+srv://root:root123@hasura-sg9il.mongodb.net/sample_analytics?retryWrites=true&w=majority', { useNewUrlParser: true,  useUnifiedTopology: true  } );
+  mongoose.connect(process.env.MONGODB_URI);
   mongoose.set('debug', true);
   console.log("mongodb connected");
 }
